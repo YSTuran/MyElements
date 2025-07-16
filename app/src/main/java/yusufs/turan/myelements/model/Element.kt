@@ -4,27 +4,21 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+@Entity
+data class Element(
+    @PrimaryKey
+    @ColumnInfo(name = "Atom Numarası")
+    val atomNumarasi: Int,
 
-class Element {
-    @Entity
-    data class Element(
-        @PrimaryKey
-        @ColumnInfo(name = "Atom Numarası")
-        var atomNumarasi: Int,
+    @ColumnInfo(name = "Element Adı")
+    val name: String,
 
-        @ColumnInfo(name = "Element Adı")
-        var name: String,
+    @ColumnInfo(name = "Ağırlık")
+    val agirlik: Double,
 
-        @ColumnInfo(name = "Ağırlık")
-        var agirlik: Double,
+    @ColumnInfo(name = "Madde Hali")
+    val hal: String,
 
-        @ColumnInfo(name = "Madde Hali")
-        var hal: String,
-
-        @ColumnInfo(name = "Grup Numarası")
-        var grup: String,
-
-        @ColumnInfo(name = "Element Cinsi")
-        var cins: String
-    )
-}
+    @ColumnInfo(name = "Grup Numarası")
+    val grup: String
+)

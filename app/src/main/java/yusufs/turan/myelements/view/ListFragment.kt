@@ -6,10 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import yusufs.turan.myelements.R
+import yusufs.turan.myelements.databinding.FragmentListBinding
 
 
 class ListFragment : Fragment() {
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
