@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="yusufs.turan.myelements.view.ListFragment"
+        android:label="ListFragment" >
+        <action
+            android:id="@+id/action_listFragment_to_elementFragment"
+            app:destination="@id/elementFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/elementFragment"
+        android:name="yusufs.turan.myelements.view.ElementFragment"
+        android:label="ElementFragment" >
+        <argument
+            android:name="atomNumarasi"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_elementFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+</navigation>
