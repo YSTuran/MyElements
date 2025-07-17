@@ -1,89 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/elementFormLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.ElementFragment"
-    android:padding="16dp">
+    android:padding="24dp">
 
-    <EditText
-        android:id="@+id/editTextName"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Element Adı"
-        android:inputType="textPersonName"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/editTextAtomNumarasi"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Atom Numarası"
-        android:inputType="number"
-        app:layout_constraintTop_toBottomOf="@id/editTextName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="12dp"/>
-
-    <EditText
-        android:id="@+id/editTextAgirlik"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Ağırlık"
-        android:inputType="numberDecimal"
-        app:layout_constraintTop_toBottomOf="@id/editTextAtomNumarasi"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="12dp"/>
-
-    <EditText
-        android:id="@+id/editTextHal"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Madde Hali"
-        android:inputType="text"
-        app:layout_constraintTop_toBottomOf="@id/editTextAgirlik"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="12dp"/>
-
-    <EditText
-        android:id="@+id/editTextGrup"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Grup Numarası"
-        android:inputType="text"
-        app:layout_constraintTop_toBottomOf="@id/editTextHal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="12dp"/>
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@id/editTextGrup"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <Button
-            android:id="@+id/buttonSave"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Kaydet" />
+            android:hint="Element Adı"
+            android:inputType="textPersonName"
+            android:backgroundTint="#6200EE"
+            android:padding="12dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
-        <Button
-            android:id="@+id/buttonDelete"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/editTextAtomNumarasi"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Sil"
-            android:layout_marginStart="24dp"/>
-    </LinearLayout>
+            android:hint="Atom Numarası"
+            android:inputType="number"
+            android:backgroundTint="#6200EE"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@id/editTextName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/editTextAgirlik"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#6200EE"
+            android:hint="Ağırlık(akb)"
+            android:inputType="numberDecimal"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextAtomNumarasi" />
+
+        <EditText
+            android:id="@+id/editTextHal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#6200EE"
+            android:hint="Madde Hali(Oda Sıcaklığında)"
+            android:inputType="text"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextAgirlik" />
+
+        <EditText
+            android:id="@+id/editTextGrup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Grup Numarası"
+            android:inputType="text"
+            android:backgroundTint="#6200EE"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@id/editTextHal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/editTextGrup"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <Button
+                android:id="@+id/buttonSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kaydet"
+                android:backgroundTint="#4CAF50"
+                android:textColor="@android:color/white"/>
+
+            <Button
+                android:id="@+id/buttonDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sil"
+                android:backgroundTint="#F44336"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="24dp"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -3,21 +3,27 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="12dp"
-    android:orientation="vertical">
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:background="#D0C56A"
+    android:elevation="2dp"
+    android:layout_marginBottom="8dp">
 
     <TextView
         android:id="@+id/textViewName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Element Adı"
-        android:textSize="18sp"
-        android:textStyle="bold"/>
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#333333"/>
 
     <TextView
         android:id="@+id/textViewDetails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Detaylar"
-        android:textSize="14sp"/>
+        android:textSize="14sp"
+        android:textColor="#777777"
+        android:layout_marginTop="4dp"/>
 </LinearLayout>
